@@ -5,7 +5,7 @@ Development of Prognostic Prediction Models and a Visual Risk Assessment Platfor
 
 基于中国常熟市2型糖尿病队列（CT2D）队列构建的预后预测模型与Shiny可视化风险评估平台，用于评估2型糖尿病人群基线后5年内的新发心血管并发症和全因死亡概率，为预后研究与个体化风险沟通提供便捷工具。
 
-[在线风险评估](https://01a1332f-05e8-83cc-ccf9-207cf3304b4e.share.connect.posit.cloud/) · [项目首页](https://jiuqiong.github.io/WWI-T2DM-5Year-Prediction-Models/) · [手动发布说明](GitHub发布说明.md)
+[在线风险评估](https://01a1332f-05e8-83cc-ccf9-207cf3304b4e.share.connect.posit.cloud/) · [项目首页](https://jiuqiong.github.io/CT2D-T2DM-5Year-Prediction-Models/) · [手动发布说明](GitHub发布说明.md)
 
 > 首次配置GitHub Pages前，可以直接通过“在线风险评估”链接使用平台。
 

@@ -22,7 +22,7 @@ build_ui <- function(bundles, dictionary) {
     h$h1("2型糖尿病预后风险评估"), h$p("5年内新发心血管并发症和死亡风险")))
   bslib::page_navbar(
     title = h$div(class = "brand", h$span(class = "brand-mark", htmltools::HTML('<svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')),
-      h$span("糖尿病预后评估")), id = "main_nav", selected = "input",
+      h$span("2型糖尿病预后评估")), id = "main_nav", selected = "input",
     window_title = "2型糖尿病 · 预后风险评估", lang = "zh-CN", fillable = FALSE,
     theme = bslib::bs_theme(version = 5, bg = "#F1F5FA", fg = "#19364F", primary = "#1D61A3", base_font = "Microsoft YaHei"),
     navbar_options = bslib::navbar_options(collapsible = TRUE, underline = FALSE),

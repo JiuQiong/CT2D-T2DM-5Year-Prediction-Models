@@ -1,8 +1,9 @@
 # CT2D-T2DM-5Year-Prediction-Models
 Development of Prognostic Prediction Models and a Visual Risk Assessment Platform for Type 2 Diabetes Based on the Changshu Type 2 Diabetes Cohort in China
+
 # 2型糖尿病5年预后预测模型
 
-基于CT2D队列构建的预后预测模型与Shiny可视化风险评估平台，用于评估2型糖尿病人群基线后5年内的新发心血管并发症和全因死亡概率，为预后研究与个体化风险沟通提供便捷工具。
+基于中国常熟市2型糖尿病队列（CT2D）队列构建的预后预测模型与Shiny可视化风险评估平台，用于评估2型糖尿病人群基线后5年内的新发心血管并发症和全因死亡概率，为预后研究与个体化风险沟通提供便捷工具。
 
 [在线风险评估](https://01a1332f-05e8-83cc-ccf9-207cf3304b4e.share.connect.posit.cloud/) · [项目首页](https://jiuqiong.github.io/WWI-T2DM-5Year-Prediction-Models/) · [手动发布说明](GitHub发布说明.md)
 
@@ -12,10 +13,10 @@ Development of Prognostic Prediction Models and a Visual Risk Assessment Platfor
 
 | 预测结局 | 适用人群 | 结局范围 |
 |---|---|---|
-| 新发心血管并发症 | 基线无冠心病或卒中的2型糖尿病人群 | 基线后5年内首次冠心病或卒中，包括致死性事件 |
+| 新发心血管并发症 | 基线无冠心病或卒中的2型糖尿病人群 | 基线后5年内首次冠心病或卒中事件 |
 | 全因死亡 | 2型糖尿病人群，包括基线已有心血管疾病者 | 基线后5年内因任何原因发生的死亡 |
 
-两项结局分别建模、独立计算，以百分比展示模型估计概率。已有心血管疾病者仍可进行全因死亡评估。
+两项结局分别建模、独立计算，以百分比展示模型估计概率。
 
 ## 平台功能
 
@@ -74,7 +75,7 @@ WWI最终进入全因死亡模型。两项结局分别采用各自筛选后的�
 
 ## 本机运行
 
-项目已在R 4.4.3环境中核验，主要依赖为`shiny`、`bslib`和`htmltools`。
+项目已在R 4.4.3环境中核验，主要依赖为`shiny`、`bslib`和`htmltools`软件包。
 
 下载项目后，将R工作目录设为仓库根目录，即包含`app.R`的目录，再执行：
 
@@ -110,19 +111,9 @@ MANIFEST.sha256               发布文件校验清单
 GitHub发布说明.md               手动上传与发布步骤
 ```
 
-## 网站发布与更新
-
-GitHub Pages提供项目首页，页面中的“开始评估”按钮连接云端Shiny应用。首次发布时，在仓库的Pages设置中选择默认分支及`/docs`目录，具体步骤见[GitHub发布说明](GitHub发布说明.md)。
-
-- 项目介绍与按钮链接：修改`docs/index.html`；首页样式：修改`docs/styles.css`。
-- 评估界面：修改`R/ui.R`；表单与会话流程：修改`R/server.R`；报告：修改`R/presentation.R`。
-- 修改模型或依赖后，重新核对变量字典、示例预测、模型信息及验证图，并更新依赖和文件校验清单。
-
-目前GitHub首页与云端Shiny分别发布。需要让Shiny随GitHub代码推送自动更新时，可按[Posit官方说明](https://docs.posit.co/connect-cloud/how-to/r/shiny-r.html)关联此仓库。
-
 ## 数据与研究使用
 
-仓库公开内容为应用代码、冻结模型参数、汇总验证信息及合成示例，原始队列个体数据另行保管。应用使用会话内存处理录入资料，未设置患者历史数据库。
+仓库公开内容为应用代码、冻结模型参数、汇总验证信息及合成示例，原始队列个体数据为保密。应用使用会话内存处理录入资料，未设置患者历史数据库。
 
 本项目用于研究展示与风险沟通。模型估计结果应结合专业临床检查和个体实际情况理解。
 

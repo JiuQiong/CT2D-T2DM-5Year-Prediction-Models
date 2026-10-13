@@ -1,0 +1,5 @@
+"example","endpoint","probability"
+"higher","CVD",0.235168536032868
+"higher","Death",0.309748970660066
+"lower","CVD",0.00620294925062903
+"lower","Death",0.00753234701211107

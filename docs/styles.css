@@ -1,0 +1,57 @@
+/* Keep the medical blue/white theme and the official Shiny brand. */
+:root {
+  --ink: #19364f;
+  --muted: #53677a;
+  --line: #dce5ef;
+  --primary: #1d61a3;
+  --primary-hover: #164f88;
+  --paper: #ffffff;
+  --radius: 12px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Microsoft YaHei","PingFang SC",system-ui,sans-serif; font-size: 17px; line-height: 1.8; }
+a { color: var(--primary); text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid var(--primary); outline-offset: 5px; }
+::selection { background: #d5e6f7; color: var(--ink); }
+.page-width { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; min-height: 80px; padding: 16px max(32px, calc((100% - 1180px) / 2)); border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 650; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.brand-mark { display: inline-grid; place-items: center; width: 38px; height: 38px; background: var(--primary); color: var(--paper); border-radius: 9px; }
+.brand-mark svg { display: block; }
+.skip-link { position: absolute; top: -100px; left: 24px; padding: 9px 16px; background: var(--primary); color: var(--paper); z-index: 1; }
+.skip-link:focus { top: 8px; }
+.hero { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; padding-block: 62px 70px; }
+h1,p,figure { margin: 0; }
+h1 { font-size: clamp(26px, 3.15vw, 42px); line-height: 1.5; font-weight: 650; letter-spacing: -.025em; white-space: nowrap; }
+p { color: var(--muted); }
+.hero-description { margin-top: 20px; max-width: 34em; font-size: 18px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-top: 28px; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 26px; color: var(--paper); background: var(--primary); border: 1px solid var(--primary); border-radius: 8px; text-decoration: none; font-weight: 650; white-space: nowrap; }
+.button:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+.button:active { transform: translateY(1px); }
+.source-link { font-size: 16px; }
+.hero-figure { min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--paper); }
+.hero-figure img { display: block; width: 100%; height: auto; }
+figcaption { color: var(--muted); font-size: 16px; margin-top: 14px; }
+@media (max-width: 900px) {
+  .site-header { padding-inline: 24px; }
+  .hero { gap: 28px; }
+}
+@media (max-width: 767px) {
+  .page-width { width: calc(100% - 36px); }
+  .site-header { padding-inline: 18px; }
+  .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 38px 36px; }
+  h1 { font-size: 32px; white-space: normal; }
+  .hero-description { font-size: 17px; }
+  .hero-figure { padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  .hero-actions, .skip-link { display: none; }
+  .page-width { width: 100%; }
+  .hero { gap: 24px; }
+  .hero-figure { break-inside: avoid; }
+  body { font-size: 12pt; }
+}

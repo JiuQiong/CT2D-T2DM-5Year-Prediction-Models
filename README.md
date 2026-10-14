@@ -21,7 +21,7 @@ Development of Prognostic Prediction Models and a Visual Risk Assessment Platfor
 ## 平台功能
 
 - **中文资料录入**：按资料类型组织表单，提供指标单位与填写提示。
-- **自动计算WWI**：根据腰围和体重自动计算，减少手工换算。
+- **自动计算weight-adjusted-waist index (WWI)**：根据腰围和体重自动计算，减少手工换算。
 - **资料检查**：核对必需指标、编码和数值范围；修改资料后原结果失效，需重新评估。
 - **演示与报告**：提供明确标记的演示资料，支持下载HTML报告及浏览器打印保存为PDF。
 
